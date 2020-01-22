@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn clean test sonar:sonar'
+                sh "mvn clean test sonar:sonar"
             }
         }
                
