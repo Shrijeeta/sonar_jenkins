@@ -20,4 +20,6 @@
     <version>3.7.0.1746</version>
 </dependency>
   </dependencies>
+  
+ <properties> <sonar.host.url>http://localhost:9000</sonar.host.url></properties>
 </project>
