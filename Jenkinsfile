@@ -1,23 +1,15 @@
   
-pipeline {
-    agent any
-      stages {
-      
-      stage('checkout') {
-            steps {
-                git 'https://github.com/Shrijeeta/sonar_jenkins.git'
-              
-              
-            }
-      
-        def mvnHome = tool 'M3'
-        }
-        
-        stage('Build') {
-            steps {
-                sh "${mvnHome}/bin/mvn clean test sonar:sonar"
-            }
-        }
-               
-    }
+node
+{
+    stage 'checkout1'
+
+    git url: 'https://github.com/mangesh2310/excersise1.git'
+
+
+     def mvnHome = tool 'M3'
+
+     stage 'Build'
+
+
+     sh "${mvnHome}/bin/mvn clean test sonar:sonar"
 }
